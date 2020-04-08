@@ -74,6 +74,18 @@ $(function(){
     var url = GetQueryString("url");
     console.log('url',url);
     $("#image").attr("src","https://camusjh.github.io/camusjh/bj.png");
+     var defereds = [];
+ 
+    $('img').each(function() {
+       var dfd = $.Deferred();
+  
+       $(this).load(dfd.resolve);
+       defereds.push(dfd);
+    });
+    $.when.apply(null, defereds).done(function() {
+       console.log('load compeleted');
+       saveImg(); 
+    }); 
 }); 
    //页面加载完成触发事件
   $(document).ready(function () {
