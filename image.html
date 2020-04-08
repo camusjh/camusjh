@@ -84,8 +84,6 @@ $(function(){
     });
     $.when.apply(null, defereds).done(function() {
        console.log('load compeleted');
-        //防止刷新超时，截屏不响应
-        window.location.reload();
        saveImg();
        
     }); 
