@@ -84,7 +84,10 @@ $(function(){
     });
     $.when.apply(null, defereds).done(function() {
        console.log('load compeleted');
-       saveImg(); 
+        //防止刷新超时，截屏不响应
+        window.location.reload();
+       saveImg();
+       
     }); 
 }); 
    //页面加载完成触发事件
