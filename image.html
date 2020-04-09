@@ -102,8 +102,10 @@ $(function(){
   function saveImg() {
     // 想要保存的图片节点
     const dom =  $("#imageview")[0];
-    const width = dom.offsetWidth;  // 可见屏幕的宽
-    const height = dom.offsetHeight;  // 可见屏幕的高
+   // const width = dom.offsetWidth;  // 可见屏幕的宽
+   // const height = dom.offsetHeight;  // 可见屏幕的高
+    const width = window.screen.width;
+    const height = window.screen.height;
     const scale =1;  // 设备的devicePixelRatio
     console.log('scale',scale);
       //用修改文字判断是否调用函数
@@ -140,7 +142,7 @@ $(function(){
             newImg.height= height;
             $("body")[0].appendChild(newImg);
             newImg.style.cssText = "width:100%;height:100%;position:absolute;top:0;left:0;right:0;bottom:0;opacity:1;z-index:20;";
-      $("#imageview").hide();
+            $("#imageview").hide();
    })
   }
 
