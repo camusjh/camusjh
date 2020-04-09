@@ -120,11 +120,11 @@ $(function(){
     canvas.style.height = height + 'px';
     context.scale(scale, scale);
     var opts = {
-            scale: scale, 
+            scale: 1, 
             canvas: canvas,
             width: width, 
             height: height,
-            dpi: window.devicePixelRatio,
+            dpi: window.devicePixelRatio*2,
             useCORS: true,//解决跨域图片问题
             logging: true,
         };
