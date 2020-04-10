@@ -35,6 +35,11 @@
             width: 100%; 
         }
         .error-tip {
+            position: absolute;
+            width: 100%;
+            bottom:5%;
+            display: block;
+            z-index: 30;
             font-size: 1.4rem;
             margin: 0 1.5rem;
             text-align: center;
@@ -62,10 +67,10 @@
        <!--<img id="logo" src="https://piccdn.luojilab.com/fe/fe-image/cd5a9661bc2f0a77ec85b0ebc8e0134f.png" alt="">--> 
        <img id="image" alt="" src="" >  
        <div class="logoView"> 
-            <img id="logo" src="https://piccdn.luojilab.com/fe/fe-image/cd5a9661bc2f0a77ec85b0ebc8e0134f.png" >
-            <p class="error-tip" id="detail" data-details="">生成图片</p>
-         </div>      
+          <img id="logo" src="https://piccdn.luojilab.com/fe/fe-image/cd5a9661bc2f0a77ec85b0ebc8e0134f.png" >          
+       </div>      
     </div>
+    <p class="error-tip" id="detail" data-details="">生成图片</p>
 </body>
 <script src="jquery.js"></script>
 <script> 
